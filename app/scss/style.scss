@@ -1,5 +1,7 @@
 @import "variables";
 // @importの順番に注意mixinを先に書くようにする
 @import "mixins";
+@import "animations";
+
 @import "globals";
 @import "header";
