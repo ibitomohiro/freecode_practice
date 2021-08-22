@@ -3,7 +3,7 @@
     // hamburger open styles
   &.open {
 
-    .header__menu {
+    .header__toggle {
       > span:first-child {
         transform: rotate(45deg);
       }
@@ -37,7 +37,7 @@
     }
   }
 
-  &__menu { //Mobile Menu
+  &__toggle { //Mobile Menu Toggle
 
     >span {
       display: block;
@@ -52,6 +52,20 @@
       }
     }
   }
+
+  &__menu{
+    background: $white;
+    padding: 1.625rem;
+
+    a {
+      display: block;
+      padding: 0.625rem;
+      color: $darkBlue;
+      text-align: center;
+    }
+  }
+
+
   &__links {
 
     a {
