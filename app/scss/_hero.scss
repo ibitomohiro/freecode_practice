@@ -26,10 +26,6 @@
       // background-position: left center;
     }
 
-    &::before, ::after{
-      border: 1px solid magenta;
-    }
-
     &::before {
       content: "";
       position: absolute;
@@ -56,6 +52,14 @@
       background-size: 93%;
       background-repeat: no-repeat;
       background-position: center bottom;
+
+      @include breakpoint-up(large){
+        width: 120%;
+        height: 122%;
+        background-size: 94%;
+        background-position: center 150%;
+        left: 22%;
+      }
     }
   }
 
