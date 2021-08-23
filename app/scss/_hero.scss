@@ -1,7 +1,12 @@
 .hero {
-  @include breakpoint-up(large){
-    display: flex;
-    align-items: center;
+  background-color: $veryLightGray;
+
+  .container {
+
+    @include breakpoint-up(large){
+      display: flex;
+      align-items: center;
+    }  
   }
 
   &__image {
@@ -38,6 +43,7 @@
     @include breakpoint-up(large){
       flex: 2;
       order: 1;
+      text-align: left;
     }
 
     h1 {
@@ -46,6 +52,10 @@
       line-height: 1.15;
       color: $darkBlue;
       margin-bottom: 1.5rem;
+
+      @include breakpoint-up(large){
+        font-size: $font-xlg;
+      }
     }
 
     p {
