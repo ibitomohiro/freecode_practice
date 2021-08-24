@@ -1,4 +1,14 @@
 .feature {
+
+  &__intro {
+    
+    @include breakpoint-up(large){
+      width: 60%;
+      margin-bottom: 3.75rem;
+      //margin-bottomは2つのプロパティで被らない
+    }
+  }
+
   &__grid {
     //モバイルは縦並びなのでflexを使う必要はない
     @include breakpoint-up(medium){
