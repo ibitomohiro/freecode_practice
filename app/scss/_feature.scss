@@ -1,10 +1,10 @@
 .feature {
 
   &__intro {
-    
+    margin-bottom: 3.75rem;
+    //モバイルと共通なので共通クラスに移動
     @include breakpoint-up(large){
       width: 60%;
-      margin-bottom: 3.75rem;
       //margin-bottomは2つのプロパティで被らない
     }
   }
@@ -31,11 +31,19 @@
   }
 
   &__icon {
+    margin-bottom: 1.875rem;
 
+    @include breakpoint-up(large){
+      margin-bottom: 2.75rem;
+    }
   }
 
   &__title {
+    font-size: 1.25rem;
 
+    @include breakpoint-up(large){
+      font-size: 1.5rem;
+    }
   }
   &__description{
 
