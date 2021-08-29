@@ -628,14 +628,15 @@ button:hover, .button:hover {
 }
 
 @media (min-width: 64em) {
-  .footer {
+  .footer .container {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[3] 2fr;
-        grid-template-columns: repeat(3, 1fr) 2fr;
-    -ms-grid-rows: (1fr)[2];
-        grid-template-rows: repeat(2, 1fr);
-        grid-template-areas: "logo links1 links2 cta" "social links1 links2 cta";
+    -ms-grid-columns: 2fr 1fr 1fr 3fr;
+        grid-template-columns: 2fr 1fr 1fr 3fr;
+    -ms-grid-rows: 1fr auto;
+        grid-template-rows: 1fr auto;
+        grid-template-areas: "logo links1 links2 cta" "social links1 links2 copyright";
+    gap: 1rem;
     justify-items: start;
   }
 }
@@ -646,7 +647,12 @@ button:hover, .button:hover {
 
 .footer__logo {
   display: inline-block;
-  margin-bottom: 1.875rem;
+}
+
+@media (max-width: 63.9375em) {
+  .footer__logo {
+    margin-bottom: 1.875rem;
+  }
 }
 
 @media (min-width: 64em) {
@@ -655,18 +661,24 @@ button:hover, .button:hover {
   }
 }
 
-.footer__social {
-  margin-bottom: 1.875rem;
+@media (max-width: 63.9375em) {
+  .footer__social {
+    margin-bottom: 1.875rem;
+  }
 }
 
 @media (min-width: 64em) {
   .footer__social {
     grid-area: social;
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+        align-self: end;
   }
 }
 
 .footer__social a {
   display: inline-block;
+  height: 1.25rem;
 }
 
 .footer__social a:not(:last-child) {
@@ -684,10 +696,14 @@ button:hover, .button:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-size: 0.9375rem;
 }
 
 @media (min-width: 64em) {
   .footer__links {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: start;
@@ -700,8 +716,10 @@ button:hover, .button:hover {
   }
 }
 
-.footer__links.col2 {
-  margin-bottom: 1.875rem;
+@media (max-width: 63.9375em) {
+  .footer__links.col2 {
+    margin-bottom: 1.875rem;
+  }
 }
 
 @media (min-width: 64em) {
@@ -711,16 +729,37 @@ button:hover, .button:hover {
 }
 
 .footer__links a {
-  line-height: 2.25;
+  line-height: 2.5;
 }
 
 @media (min-width: 64em) {
   .footer__cta {
     grid-area: cta;
+    text-align: right;
+    -ms-grid-column-align: end;
+        justify-self: end;
   }
 }
 
-.footer__cta a.button {
-  margin-bottom: 1.875rem;
+@media (max-width: 63.9375em) {
+  .footer__cta a.button {
+    margin-bottom: 1.875rem;
+  }
+}
+
+.footer__copyright {
+  font-size: 0.8125rem;
+  color: #9698a6;
+}
+
+@media (min-width: 64em) {
+  .footer__copyright {
+    grid-area: copyright;
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+        align-self: end;
+    -ms-grid-column-align: end;
+        justify-self: end;
+  }
 }
 /*# sourceMappingURL=style.css.map */
