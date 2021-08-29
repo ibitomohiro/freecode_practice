@@ -47,6 +47,10 @@
       display: inline-block;
       height: 1.25rem;
 
+      svg path {
+        transition: fill 150ms ease-in-out;
+      }
+
       &:hover svg path {
         fill: $limeGreen;
       }
@@ -86,6 +90,11 @@
     }
     a {
       line-height: 2.5;
+      transition: color 150ms ease-in-out;
+
+      &:hover  {
+        color: $limeGreen;
+      }
     }
   }
 
